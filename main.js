@@ -1,6 +1,6 @@
 const { app, BrowserWindow, Menu, Tray, globalShortcut } = require("electron");
 const spawn = require("child_process").spawn;
-const iconpath = "steamer2.png";
+const iconpath = "resources/app/steamer2.png";
 let win;
 function createWindow() {
   win = new BrowserWindow({
