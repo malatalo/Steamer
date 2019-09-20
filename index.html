@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Steamer</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="horsey.css" />
+  </head>
+  <body>
+    <div class="container">
+      <input
+        id="horsey"
+        id="searchInput"
+        name="term"
+        type="text"
+        placeholder="Search the library"
+        size="24"
+      />
+      <div class="input-div">
+        <span class="text-thing">Global hotkey</span>
+        <div class="hotkey-container">
+          <div class="lower-input-container" id="hotkeyDiv">
+            <input id="hotkeyInput" class="lower-input" type="text" />
+          </div>
+          <div class="button-div resetButton" id="hotkeySet">
+            <span class="button-span reset-span" id="hotkeySpan">
+              SET
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="input-div">
+        <span class="text-thing">Steam.exe</span>
+        <div class="lower-input-container" id="steamExeDiv">
+          <input id="steamExeInput" class="lower-input" type="text" disabled />
+        </div>
+      </div>
+      <div class="input-div">
+        <span class="text-thing">Request</span>
+        <input class="tgl tgl-skewed" id="cb" type="checkbox" />
+        <label class="tgl-btn" data-tg-off="PUBLIC" data-tg-on="API" for="cb"></label>
+      </div>
+      <div class="input-div">
+        <span class="text-thing">SteamID</span>
+        <div class="lower-input-container">
+          <input id="steamIdInput" class="lower-input" type="text" />
+        </div>
+      </div>
+      <div class="input-div" id="apikeydiv">
+        <span class="text-thing">API key</span>
+        <div class="lower-input-container">
+          <input id="apiKeyInput" class="lower-input" type="text" />
+        </div>
+      </div>
+      <div class="button-div load-div"><span id="loadGames" class="button-span load-span">LOAD GAMES</span></div>
+    </div>
+    <div class="button-div quit-div"><span id="quitX" class="button-span">QUTI</span></div>
+    <div class="button-div close-div"><span id="closeX" class="button-span">MINIMIZE</span></div>
+    <script src="horsey.js"></script>
+    <script src="renderer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,222 @@
+html {
+  /* background-color: #1b2838; */
+  background-image: url("background.jpg");
+  background-size: cover;
+  color: #fff;
+}
+
+.container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 20px;
+  border: 0;
+  width: 320px;
+  outline: none;
+}
+
+.sey-container.sey-show {
+  width: 320px;
+  font-size: 18px;
+  left: 44px !important;
+  top: 78px !important;
+  background: linear-gradient(to bottom, #e3eaef 5%, #c7d5e0 95%);
+}
+
+.sey-categories {
+  margin: 5px;
+}
+
+.sey-item {
+  border-top: solid;
+  border-top-width: 1px;
+}
+
+#horsey {
+  margin: 20px;
+}
+
+.lower-input-container {
+  box-shadow: rgba(255, 255, 255, 0.2) 1px 1px 0px 0px;
+  cursor: text;
+  height: 27px;
+  width: 216px;
+  background: rgb(49, 98, 130) none repeat scroll 0% 0% / auto padding-box border-box;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px 3px 3px 3px;
+  padding: 0px 6px;
+}
+
+.lower-input {
+  color: black;
+  height: 26px;
+  text-decoration: none solid rgb(14, 28, 37);
+  text-shadow: rgba(255, 255, 255, 0.1) 1px 1px 0px;
+  width: 216px;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+  border: 0px none rgb(14, 28, 37);
+  font: normal normal 400 normal 15px / normal Arial, Helvetica, sans-serif;
+  margin: 1px 2px 0px 2px;
+  outline: rgb(14, 28, 37) none 0px;
+  padding: 0px;
+}
+
+.text-thing {
+  color: #1b2838;
+  font: normal normal 400 normal 14px / 16px "Motiva Sans", sans-serif;
+  margin-left: 5px;
+}
+
+.input-div {
+  margin-top: 15px;
+}
+
+.button-div {
+  color: rgb(103, 193, 245);
+  display: inline-block;
+  height: 24px;
+  width: 86.0469px;
+  background: rgba(27, 40, 56, 0.5);
+  border: 0px none rgb(103, 193, 245);
+  border-radius: 2px 2px 2px 2px;
+  padding: 1px;
+}
+
+.button-span {
+  color: rgb(103, 193, 245);
+  cursor: pointer;
+  display: block;
+  height: 24px;
+  text-align: center;
+  width: 56.0469px;
+  font: normal normal 400 normal 12px / 24px Arial, Helvetica, sans-serif;
+  padding: 0px 15px;
+}
+
+.resetButton {
+  background: rgba(27, 40, 56, 0.75);
+  margin-left: 15px;
+  margin-top: 1px;
+  width: auto;
+}
+
+.reset-span {
+  padding: 0;
+}
+
+.load-div {
+  background: rgba(27, 40, 56, 0.75);
+  width: 120px;
+  margin: 20px;
+}
+
+.load-span {
+  width: 100%;
+  padding: 0;
+}
+
+.close-div {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.quit-div {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+#steamExeDiv, #steamExeInput {
+  cursor: pointer;
+}
+
+#hotkeyDiv {
+  width: 143px;
+}
+
+#hotkeyInput {
+  width: 140px;
+}
+
+.hotkey-container {
+  width: 230px;
+  display: flex;
+  flex-direction: row;
+}
+
+.tgl {
+  display: none;
+}
+.tgl,
+.tgl:after,
+.tgl:before,
+.tgl *,
+.tgl *:after,
+.tgl *:before,
+.tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 4em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px 3px 3px 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 29px;
+}
+
+.tgl-skewed + .tgl-btn {
+  width: 230px;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: all 0.2s ease;
+  font-family: sans-serif;
+  background: rgb(49, 98, 130) none repeat scroll 0% 0% / auto padding-box border-box;
+}
+.tgl-skewed + .tgl-btn:after,
+.tgl-skewed + .tgl-btn:before {
+  display: inline-block;
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  line-height: 2em;
+  font-weight: bold;
+  text-decoration: none solid rgb(14, 28, 37);
+  text-shadow: rgba(255, 255, 255, 0.1) 1px 1px 0px;
+  color: #171a21;
+  height: 26px;
+}
+.tgl-skewed + .tgl-btn:after {
+  left: 100%;
+  content: attr(data-tg-on);
+}
+.tgl-skewed + .tgl-btn:before {
+  left: 0;
+  content: attr(data-tg-off);
+}
+.tgl-skewed + .tgl-btn:active {
+  background: rgb(49, 98, 130) none repeat scroll 0% 0% / auto padding-box border-box;
+}
+.tgl-skewed:checked + .tgl-btn:before {
+  left: -100%;
+}
+.tgl-skewed:checked + .tgl-btn:after {
+  left: 0;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "steamer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-packager . Steamer --platform=win32 --arch=x64"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^6.0.4",
+    "electron-packager": "^14.0.6"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "xml2js": "^0.4.19"
+  }
+}
