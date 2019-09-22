@@ -24,13 +24,13 @@ function createWindow() {
 
   win.on("minimize", function(event) {
     event.preventDefault();
-    win.hide();
+    handleHide();
   });
 
   win.on("close", function(event) {
     if (!application.isQuiting) {
       event.preventDefault();
-      win.hide();
+      handleHide();
     }
 
     return false;
@@ -60,6 +60,7 @@ function createWindow() {
 
 app.on("ready", () => {
   createWindow();
+  handleHide();
   win.on("hide", () => {visible = false});
   win.on("show", () => {visible = true});
 });
@@ -78,19 +79,19 @@ app.on("activate", () => {
 
 const { ipcMain } = require("electron");
 ipcMain.on("close-click", (evt, arg) => {
-  win.hide();
+  handleHide();
 });
 
 ipcMain.on("quit-click", (evt, arg) => {
   app.quit();
 });
 
-let visible = true;
+let visible = false;
 ipcMain.on("hotkey", (evt, arg) => {
   globalShortcut.unregisterAll();
   globalShortcut.register(arg, () => {
     if(visible){
-      win.hide();
+      handleHide();
     } else {
       win.show();
     }
@@ -98,7 +99,7 @@ ipcMain.on("hotkey", (evt, arg) => {
 });
 
 ipcMain.on("startGame", (evt, exe, game) => {
-  win.hide();
+  handleHide();
   let bat = spawn("cmd.exe", [
     "/c",
     exe,
@@ -109,6 +110,11 @@ ipcMain.on("startGame", (evt, exe, game) => {
 app.on("will-quit", () => {
   globalShortcut.unregisterAll();
 });
+
+const handleHide = () => {
+  win.webContents.send("hideYoKids");
+  win.hide();
+}
 
 // #YOLO
 process.env["ELECTRON_DISABLE_SECURITY_WARNINGS"] = "true";

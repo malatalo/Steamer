@@ -17,6 +17,11 @@ window.addEventListener("focus", () => {
   ac.focus();
 });
 
+ipcRenderer.on("hideYoKids", (e,m)=>{
+  horseee.hide();
+  document.getElementById("horsey").value = "";
+})
+
 document.getElementById("quitX").addEventListener("click", () => {
   ipcRenderer.send("quit-click");
 });
@@ -151,7 +156,6 @@ const initHorsey = () => {
     noMatches: "no matches",
     highlighter: false,
     predictNextSearch(info) {
-      document.getElementById("horsey").value = "";
       ipcRenderer.send("startGame", localStorage.getItem("steamExe") ,info.selection.value);
     }
   });
